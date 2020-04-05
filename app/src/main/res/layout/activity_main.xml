@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mohamed.oscilloscope.MainActivity"
+    android:weightSum="1">
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:orientation="horizontal">
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:id="@+id/timeDiv"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:id="@+id/VoltDiv"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radGroup"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/ch1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:checked="false"
+                android:text="channel 1" />
+
+            <RadioButton
+                android:id="@+id/ch2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="Channel 2" />
+
+            <RadioButton
+                android:id="@+id/both"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="both" />
+
+            <RadioButton
+                android:id="@+id/add"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="add" />
+        </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_weight="0.1"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"></FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25">
+
+            <CheckBox
+                android:id="@+id/invert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="onCheckboxClicked"
+                android:text="Invert" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"></FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"></FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>
